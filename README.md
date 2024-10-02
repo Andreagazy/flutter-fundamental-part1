@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # hello_world
 
 A new Flutter project.
@@ -16,5 +15,3 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 =======
-# Hello World
->>>>>>> ec797ec5ac29cebc1241fee8fd8888b36213078d
