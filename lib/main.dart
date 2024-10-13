@@ -9,6 +9,9 @@ import 'package:hello_world/basic_widgets/datetime_picker_widget.dart';
 import 'package:hello_world/basic_widgets/fab_widget.dart';
 import 'dart:async';
 
+import 'package:hello_world/pages/home_page.dart';
+import 'package:hello_world/pages/item_page.dart';
+
 // void main() {
 //   runApp(const MyApp());
 // }
@@ -311,57 +314,193 @@ import 'dart:async';
 //   }
 // }
 
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         primarySwatch: Colors.red,
+//       ),
+//       home: const MyHomePage(title: 'My Home Page / Andreagazy / 2241720146'),
+//     );
+//   }
+// }
+
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({Key? key, required this.title}) : super(key: key);
+
+//   final String title;
+
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
+
+// class _MyHomePageState extends State<MyHomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(widget.title),
+//         backgroundColor: Color.fromARGB(22, 211, 23, 44),
+//       ),
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//             MyImageWidget(),
+//             MyTextWidget(),
+//             MyLayout(),
+//             DateTimePickerWidget(),
+//             InputDanSelectionWidget(),
+//             LoadingCupertinoWidget(),
+//             // FabWidget(),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// Pertemuan 6 - Praktikum 1 sampai 4
+// void main() => runApp(const MyApp());
+
+// Widget titleSection = Container(
+//   padding: const EdgeInsets.all(32),
+//   child: Row(
+//     children: [
+//       Expanded(
+//         // soal 1
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             // soal 2
+//             Container(
+//               padding: const EdgeInsets.only(bottom: 8),
+//               child: const Text(
+//                 'Gunung Panderman',
+//                 style: TextStyle(
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//             ),
+//             const Text(
+//               'Batu, Malang, Indonesia',
+//               style: TextStyle(
+//                 color: Colors.grey,
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//       // soal 3
+//       Icon(
+//         Icons.star,
+//         color: Colors.red,
+//       ),
+//       const Text('41'),
+//     ],
+//   ),
+// );
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     Color color = Theme.of(context).primaryColor;
+
+//     Widget buttonSection = Row(
+//       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//       children: [
+//         _buildButtonColumn(color, Icons.call, 'CALL'),
+//         _buildButtonColumn(color, Icons.near_me, 'ROUTE'),
+//         _buildButtonColumn(color, Icons.share, 'SHARE'),
+//       ],
+//     );
+
+//     Widget textSection = Container(
+//       padding: const EdgeInsets.all(32),
+//       child: const Text(
+//         'Gunung Panderman, terletak di Kota Batu, Jawa Timur, dengan ketinggian 2.045 meter di atas permukaan laut. '
+//         'Destinasi ini populer bagi pendaki pemula karena jalurnya yang ramah dan pemandangan dari Puncak Basundara. '
+//         'Waktu tempuh ke puncaknya sekitar 2-3 jam, dan panorama alam di sekitarnya menjadikannya tempat favorit untuk berwisata.'
+//         '\n\nNama : Andreagazy Iza Amerianto\nNIM : 2241720146',
+//         softWrap: true,
+//       ),
+//     );
+
+//     return MaterialApp(
+//       title: 'Flutter layout: Andreagazy Iza Amerianto dan 2241720146',
+//       home: Scaffold(
+//           appBar: AppBar(
+//             title: const Text('Flutter layout demo'),
+//           ),
+//           body: ListView(
+//             children: [
+//               Image.asset('lib/img/mtpanderman.jpg',
+//                   width: 600, height: 240, fit: BoxFit.cover),
+//               titleSection,
+//               buttonSection,
+//               textSection,
+//             ],
+//           )),
+//     );
+//   }
+
+//   Column _buildButtonColumn(Color color, IconData icon, String label) {
+//     return Column(
+//       mainAxisSize: MainAxisSize.min,
+//       mainAxisAlignment: MainAxisAlignment.center,
+//       children: [
+//         Icon(icon, color: color),
+//         Container(
+//           margin: const EdgeInsets.only(top: 8),
+//           child: Text(
+//             label,
+//             style: TextStyle(
+//               fontSize: 12,
+//               fontWeight: FontWeight.w400,
+//               color: color,
+//             ),
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }
+
+// Pertemuan 6 - Praktikum 5
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Belanja',
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
       theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: const MyHomePage(title: 'My Home Page / Andreagazy / 2241720146'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: Color.fromARGB(22, 211, 23, 44),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            MyImageWidget(),
-            MyTextWidget(),
-            MyLayout(),
-            DateTimePickerWidget(),
-            InputDanSelectionWidget(),
-            LoadingCupertinoWidget(),
-            // FabWidget(),
-          ],
+        useMaterial3: true,
+        primaryColor: Colors.blue,
+        textTheme: TextTheme(
+          bodyMedium: TextStyle(fontSize: 16),
         ),
       ),
+      routes: {
+        '/': (context) => HomePage(),
+        '/item': (context) => ItemPage(),
+      },
     );
   }
 }
